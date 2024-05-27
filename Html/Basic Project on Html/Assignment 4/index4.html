@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Items to Drop-down List</title>
+</head>
+<body>
+  <h1>Add item</h1>
+  <select name="" id="dropdown">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+  </select>
+  <button id="add" onclick="additem()">add</button>
+  <input type="text" id="input">
+  <script>
+    function additem(){
+       var dropdown= document.getElementById("dropdown")
+       var newItem = document.getElementById("input").value;
+       console.log(newItem)
+
+       if(newItem != ""){
+        var option =document.createElement("option");
+        option.text = newItem;
+        // option.value=newItem;
+        dropdown.add(option)
+        newItem.value=""
+
+       }else{
+        alert("hello")
+       }
+
+    }zw
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form>
+        <label for="FN">First Name</label>
+        <input type="text" id="FN">
+
+        <label for="LN">Last Name</label>
+        <input type="text" id="LN">
+
+        <label for="EM">Email</label>
+        <input type="text" id="EM">
+
+        <label for="PH">Phone No</label>
+        <input type="text" id="PH">
+
+        <button onclick="submitForm()">Submit</button>
+    </form>
+    <div id="container"></div>
+    <script>
+        function submitForm(){
+            const firstName = document.getElementById("FN").value;
+            const lastName = document.getElementById("LN").value;
+            const email = document.getElementById("EM").value;
+            const phone = document.getElementById("PH").value;
+
+            const output= `<p><strong>First Name:</strong> ${firstName}</p>
+            <p><strong>Last Name:</strong> ${lastName}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>`;
+
+            document.getElementById("container").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form
+        action="process_signup.php"
+        method="POST"
+        onsubmit="return Validate()"
+      >
+        <input
+          type="text"
+          name="full_name"
+          placeholder="Full Name"
+          id="full_name"
+          onkeyup="validateName()"
+          required
+        />
+        <span id="name_error" class="error_text"></span>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          id="email"
+          onkeyup="validateEmail()"
+          required
+        />
+        <span id="email_error" class="error_text"></span>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          id="Password"
+          onkeyup="validatePassword()"
+          required
+        />
+        <span id="password_error" class="error_text"></span>
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
+    <script>
+      function Validation(){
+          const name = document.getElementById('full_name').value;
+          const password = document.getElementById('Password').value
+          const email = document.getElementById("email").value
+          const regex=  /^(?=.*\d).{4,8}$/
+          var isvalid = true;
+          if(name.length == 0){
+              document.getElementById("name_error").innerHTML="Name is required"
+              isValid= false;
+          }
+          if(password.length == 0)
+          {
+              document.getElementById("password_error").innerHTML="password is required"
+              invalid = false;
+          }
+          if(email.length == 0)
+          {
+              document.getElementById("email_error").innerHTML="email is required"
+              invalid = false;
+          }
+          else if(!regex.test(password)){
+              document.getElementById("password_error").innerHTML="Password must be 4 to 8 characters long and atleast one digit shouul be there"
+          }
+          return isValid;
+      }
+
+      function validatename(){
+          const name=document.getElementById("full_name")
+          if(name.length==0)
+          {
+              document.getElementById("name_error")="*Name is required"
+
+          }else{
+              document.getElementById("name_error")=" "
+          }
+      }
+      function validatePassword(){
+          const Password=document.getElementById("Password")
+          if(Password.length==0)
+          {
+              document.getElementById("password_error")="*Password is required"
+
+          }else{
+              document.getElementById("password_error")=" "
+          }
+      }
+      function validateEmail(){
+          const email = document.getElementById("email")
+          if(email.length==0)
+          {
+              document.getElementById("email_error")="*email is required"
+
+          }else{
+              document.getElementById("email_error")=" "
+          }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#logo{
+   width:70px;
+   height:70px;
+}
+#Navbar-container{
+    width:100px;
+    height:50px;
+    background-color: rgb(65, 230, 128);
+    position:fixed;
+    top: 0%;
+    /* box-shadow: h v blur color; */
+    box-shadow: 10px 10px 15px blur rgb(199, 187, 187);
+}
+body{
+    margin:0;
+}
+#Navbar-link{
+    float:right;
+    position: relative;
+    top:40px;
+    right: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: aqua;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+
+}
+#Navbar-link a:hover{
+    /* border-width: 1px;
+    border-style: ; */
+
+}
+
+#Navbar-link a{
+    margin-left: 30px;
+}
+#Navbar-link a:hover{
+    color: red;
+    background: red;
+
+}
+#brand{
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#description-container{
+    margin-top: 130px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+#description-container P {
+    text-align: justify;
+}
+#description-container h1{
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-align: center;
+}
+#main-container{
+    height:100px;
+    width:100%;
+    background-color: blueviolet;
+}
+box1{
+    float:left;
+    width:33.33%;
+    height:inherit;
+    background-color: aqua;
+}
+box2{
+
+}

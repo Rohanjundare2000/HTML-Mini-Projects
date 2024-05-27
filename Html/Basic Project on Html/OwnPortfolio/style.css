@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding:0;
+    font-family: 'Poppins';
+}
+body{
+}
+#Navbar-container{
+    z-index:1;
+    padding: 0;
+    height: 100px;
+    width:100%;
+    background-color: #f8f9f9 ;
+    box-shadow:10px 10px 20px rgb(218, 243, 75);
+    position: fixed;
+}
+#img1{
+    height:65px;
+    width:65px;
+    margin-left: 35px;
+    margin-top: 17px;
+}
+#Container{
+     float:right;
+     position:absolute;
+     top:30px;
+     right:55px;
+}
+
+#img3{
+    height:700px;
+    width:700px;
+    position: absolute;
+    float: right;
+    top: 100px;
+    right:60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 8px;
+}
+#Main-container{
+    z-index: -1 ;
+}
+#main2{
+   height: 700px;
+   width:700px;
+   position: absolute;
+   float: left;
+   top: 100px;
+   left: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#main2 button{
+    width: 100px;
+    height:40px;
+}
+#Main-container2{
+    position: absolute;
+    top:800px;
+    right:20px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#Container1{
+    margin-right:20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 10px gray;
+}
+#Container2 p{
+    font-size: 30px;
+}
+#ContactUs{
+    position: relative;
+    top: 1350px;
+    display: flex;
+    justify-content:space-between;
+   align-items: center;
+}
+#Contact1 h1{
+    margin-left: 110px;
+    padding-bottom: 20px;
+}
+#contact1{
+  width:50%;
+}
+
+input{
+    width: 400px;
+    padding: 10px;
+    margin:5px auto;
+    margin-left: 70px;
+    display: flex;
+    gap: 10px; 
+}
+    
+#Contact1 label{
+    font-size: large;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+#conatact2{
+    width:50%;
+}
+#contact button{
+    padding: 10px;
+    width:20px;
+    align-items: center;
+    margin-left: 300px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Remove</h1>
+    <select name="" id="dropdown">
+        <option name="" id="one">1</option>
+        <option name="" id="two">2</option>
+        <option name="" id="three">3</option>
+        <option name="" id="four">4</option>
+    </select>
+    <button id="btn" onclick="Remove()">Remove</button>
+    <button id="btn2" onclick="ADD()">ADD</button>
+    <input type="text" id="Input">
+    <script>
+        function ADD(){
+             const Input =document.getElementById("Input").value
+            const dropdown= document.getElementById("dropdown")
+
+            if(Input.length!="")
+            {
+                const a =document.createElement("option")
+                a.text=Input;
+                dropdown.add(a)
+                Input.value=""
+            }                                                                       
+            else{
+                alert("hello")
+            }
+
+        }
+        function Remove(){
+            const dropdown=document.getElementById("dropdown")
+           const selectedIndex= dropdown.options[dropdown.selectedIndex]
+
+           if(selectedIndex)
+           {
+            dropdown.removeChild(selectedIndex)
+           }else{
+            alert()
+           }
+        }
+    </script>
+</body>
+</html>

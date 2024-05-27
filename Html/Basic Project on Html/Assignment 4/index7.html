@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" placeholder="phone" id="h">
+        <input type="button" value="+" onclick="F()">
+       <div id="container">
+
+       </div>
+       <script>
+        var count=0
+         function F(){
+            if(count<=10){
+                const s=document.createElement("input")
+                s.setAttribute("type","text");
+              const container= document.getElementById("container")
+               container.appendChild(s)
+            }
+            count++
+        }
+       </script>
+</body>
+</html>

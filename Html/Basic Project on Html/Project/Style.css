@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  color:#e6961d;
+  z-index: 1;
+  max-width: 400px;
+  margin: 150px auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Change the opacity value here */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px;
+  background-color:#e6961d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e63b1d;
+}

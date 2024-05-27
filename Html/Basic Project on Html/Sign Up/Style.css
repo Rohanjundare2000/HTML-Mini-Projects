@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#e{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+}
+label{
+    margin-right: 20px;
+}
+form input h1 {
+    margin-top: 10px;
+    width:260px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+form button{
+    position: relative;
+    left :40%;
+}

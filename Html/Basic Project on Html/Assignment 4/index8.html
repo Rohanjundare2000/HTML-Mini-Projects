@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Password" id="password-field">
+    <input type="button" value="show" onclick="Show()" id="btn">
+<script>
+    function Show(){
+        const passwordfield=document.getElementById("password-field")
+        const btn= document.getElementById('btn')
+        const btntext=btn.getAttribute("value")
+        if(btntext=="show")
+        {
+            passwordfield.setAttribute("type","text")
+            btn.setAttribute("value","hide")
+        }else{
+            passwordfield.setAttribute("type","password")
+            btn.setAttribute("value","show"); 
+        }
+    }
+</script>
+</body>
+</html>

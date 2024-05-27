@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="https://www.google.com" onsubmit="return validate()">
+        <input type="text" placeholder="Enter Name" onkeyup="validatename()" id="name">
+        <span id="name-error" class="error-text" style="color:red"></span>
+
+        <br><br>
+
+        <input type="password" placeholder="Enter Password" onkeyup="validatepassword()" id="password">
+        <span id="password-error" class="error-text" style="color:red" style="font-size:x-small;"></span>
+        <br><br>
+
+        <button type="submit" value="Log In">log In</button>
+    </form>
+
+    <script>
+        function validate(){
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("password").value;
+            const regex = /^(?=.*\d).{4,8}$/
+            var isvalid = true;
+            if(name.length == 0){
+                document.getElementById("name-error").innerHTML="*Name is Required";
+                isvalid= false;
+            }
+            if(password.length == 0){
+                document.getElementById("password-error").innerHTML="*Password is Required";
+                isvalid = false;
+            }
+            else if(!regex.test(password)){
+                document.getElementById("password-error").innerHTML="Password must be 4 to 8 characters long and atleast one digit shouul be there";
+                isvalid = false;
+            }
+            return isvalid;
+        }
+
+        function validatename(){
+            const name = document.getElementById("name").value;
+            if(name.length==0){
+                document.getElementById("name-error").innerHTML="*Name is Required";   
+            }
+            else{
+                document.getElementById("name-error").innerHTML="";
+            }
+        }
+
+        function validatepassword(){
+            const name = document.getElementById("password").value;
+            if(name.length==0){
+                document.getElementById("password-error").innerHTML="*Password is Required";   
+            }
+            else{
+                document.getElementById("password-error").innerHTML="";
+            }
+        }
+    </script>
+    
+</body>
+</html>

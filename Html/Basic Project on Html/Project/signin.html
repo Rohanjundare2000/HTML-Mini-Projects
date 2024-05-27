@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Segoe Ui Light";
+      }
+      body {
+        background: linear-gradient(90deg, #7e57c2, #ec407a);
+        /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6lJjEfy2jJAt7-Th1qWmnyA57_jW81jHe_w&s"); */
+        background-repeat: no-repeat;
+        background-size: 1300px 700px;
+      }
+      img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
+      #login-box {
+        position: relative;
+        z-index: 1;
+        width: 450px;
+        height: 450px;
+        background: rgb(2, 2, 26);
+        margin: 120px auto;
+        text-align: center;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        /*transform: translate(-50%, -50%);
+         box-shadow: 12px 12px 15px #1976D2; */
+      }
+      h1 {
+        color: rgb(13, 13, 65);
+        font-size: 45px;
+        padding-top: 30px;
+      }
+      input {
+        width: 65%;
+        margin-bottom: 25px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-bottom-color: #7cb7f1;
+        border-bottom-style: solid;
+        outline-width: 0;
+        background-color: rgba(69, 58, 58, 0.3);
+        font-size: 1rem;
+        color: whitesmoke;
+        border-radius: 20px;
+        text-indent: 1em;
+      }
+      button {
+        width: 40%;
+        border: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #3c5875;
+        color: white;
+        font-size: 15px;
+        margin-top: 15px;
+        transition: background 0.3s;
+        border-radius: 20px;
+      }
+      button:hover {
+        color: #1976d2;
+        background: white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #1976d2;
+        cursor: pointer;
+      }
+      a {
+        color: wheat;
+        text-underline-offset: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="achal-sahu-h2-copy-1.jpg" alt="" />
+    <div id="login-box">
+      <h1>LOGIN</h1>
+      <form>
+        <input type="text" placeholder="Enter Username" />
+        <input type="password" placeholder="Enter Password" />
+        <button type="submit">Login</button>
+      </form>
+      <p><a>Need Account? </a> <a href="index.html"> Sign Up</a></p>
+    </div>
+  </body>
+</html>
